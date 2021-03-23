@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColumnLevelUserToUsersTable extends Migration
+class AddColumnGoogleIdToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddColumnLevelUserToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->enum('level_user', ['admin', 'user'])->after('email');
+            $table->string('google_id')->nullable()->after('email');
         });
     }
 
@@ -26,7 +26,7 @@ class AddColumnLevelUserToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('level_user');
+            $table->dropColumn('google_id');
         });
     }
 }

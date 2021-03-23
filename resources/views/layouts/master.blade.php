@@ -7,9 +7,12 @@
     <title>@yield('title', 'AdminLTE 3 | Dashboard')</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
 
     @stack('custom-css')
 </head>
@@ -17,8 +20,8 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
 
-        @include('layouts.nav-header')        
-        @include('layouts.sidebar')        
+        @include('layouts.nav-header')
+        @include('layouts.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -47,7 +50,7 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        
+
         @include('layouts.footer')
 
         <!-- Control Sidebar -->
